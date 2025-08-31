@@ -1,0 +1,599 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #23272a;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: #404eed;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05), 0 2px 0 rgba(4, 4, 5, 0.05);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+    color: #b9bbbe;
+}
+
+.login-btn {
+    background: white;
+    color: #23272a;
+    padding: 7px 16px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-btn:hover {
+    color: #404eed;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.menu-toggle span {
+    width: 20px;
+    height: 2px;
+    background: white;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    background: url('Header Background.png') center center/cover no-repeat;
+    padding: 120px 0 80px;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 24px;
+    line-height: 1.625;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    max-width: 720px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-download {
+    background: white;
+    color: #23272a;
+}
+
+.btn-download:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn-browser {
+    background: #23272a;
+    color: white;
+}
+
+.btn-browser:hover {
+    background: #2c2f33;
+    transform: translateY(-1px);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Feature Sections */
+.feature-section {
+    padding: 120px 0;
+    background: white;
+}
+
+.feature-section:nth-child(even) {
+    background: #f6f6f6;
+}
+
+.feature-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+    align-items: center;
+}
+
+.feature-section.reverse .feature-content {
+    direction: rtl;
+}
+
+.feature-section.reverse .feature-text {
+    direction: ltr;
+}
+
+.feature-text h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #23272a;
+}
+
+.feature-text p {
+    font-size: 20px;
+    line-height: 1.625;
+    color: #4f545c;
+}
+
+.feature-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Technology Section */
+.technology-section {
+    background: #f6f6f6;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.technology-section h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #23272a;
+}
+
+.technology-section > p {
+    font-size: 20px;
+    line-height: 1.625;
+    color: #4f545c;
+    max-width: 1040px;
+    margin: 0 auto 40px;
+}
+
+.technology-image {
+    margin: 40px 0;
+}
+
+.technology-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.download-section {
+    margin-top: 40px;
+}
+
+.download-section h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #23272a;
+}
+
+.btn-download-large {
+    background: #404eed;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 28px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-download-large:hover {
+    background: #3742fa;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 15px rgba(64, 78, 237, 0.3);
+}
+
+/* Footer */
+.footer {
+    background: #23272a;
+    color: white;
+    padding: 80px 0 32px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+    color: #404eed;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.language-selector {
+    margin-bottom: 24px;
+    color: white;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-links a {
+    color: white;
+    transition: color 0.15s ease;
+}
+
+.social-links a:hover {
+    color: #404eed;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-column h4 {
+    color: #404eed;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    transition: color 0.15s ease;
+}
+
+.footer-column a:hover {
+    color: #404eed;
+}
+
+.footer-bottom {
+    border-top: 1px solid #4f545c;
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.signup-btn {
+    background: #404eed;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+}
+
+.signup-btn:hover {
+    background: #3742fa;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 44px;
+    }
+    
+    .feature-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .feature-section.reverse .feature-content {
+        direction: ltr;
+    }
+    
+    .feature-text h2 {
+        font-size: 40px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .feature-section {
+        padding: 80px 0;
+    }
+    
+    .feature-text h2 {
+        font-size: 32px;
+    }
+    
+    .feature-text p {
+        font-size: 16px;
+    }
+    
+    .technology-section {
+        padding: 80px 0;
+    }
+    
+    .technology-section h2 {
+        font-size: 32px;
+    }
+    
+    .technology-section > p {
+        font-size: 16px;
+    }
+    
+    .download-section h3 {
+        font-size: 24px;
+    }
+    
+    .footer {
+        padding: 60px 0 24px;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .nav {
+        padding: 0 16px;
+    }
+    
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    .feature-text h2 {
+        font-size: 28px;
+    }
+    
+    .technology-section h2 {
+        font-size: 28px;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content > * {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.hero-content h1 {
+    animation-delay: 0.1s;
+}
+
+.hero-content p {
+    animation-delay: 0.2s;
+}
+
+.hero-buttons {
+    animation-delay: 0.3s;
+}
+
+/* Hover effects para seções */
+.feature-section {
+    transition: all 0.3s ease;
+}
+
+.feature-image img {
+    transition: transform 0.3s ease;
+}
+
+.feature-section:hover .feature-image img {
+    transform: scale(1.02);
+}
+
+/* Estados de foco para acessibilidade */
+.btn:focus,
+.login-btn:focus,
+.signup-btn:focus {
+    outline: 2px solid #404eed;
+    outline-offset: 2px;
+}
+
+.nav-links a:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Scrollbar personalizada para webkit */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #404eed;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3742fa;
+}
